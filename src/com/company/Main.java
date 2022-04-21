@@ -23,7 +23,7 @@ public class Main {
 
         public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите выражение: в одну строку через пробел ");
+        System.out.println("Введите выражение: в одну строку через пробел.");
             System.out.println(calc(sc.nextLine()));
 
         }
