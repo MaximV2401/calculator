@@ -29,7 +29,7 @@ public class Main {
         }
     public static String calc(String input){
 
-       String [] op = input.split(" ");
+       String [] op = input.split(" ", 3);
        int index1;
        int index2;
        String operation = op[1];
@@ -38,7 +38,7 @@ public class Main {
         if (testRom(op[0])&&testRom(op[2])){
             index1 = convertToAr(op[0]);
             index2 = convertToAr(op[2]);
-            if ((index1<0)||(index2<0)) throw new IllegalStateException();
+            if ((index1<0||index1>10)||(index2<0||index2>10)) throw new IllegalStateException();
             result= operation(index1, operation, index2);
             return convertToRome(result);
         } else if (testAr(op[0])&&testAr(op[2])){
